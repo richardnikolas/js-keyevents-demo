@@ -1,11 +1,17 @@
+:root {
+  --main-color: #270170;
+}
+
 body {
-  background-color: #FFFFFF;
+  background-color: #d9d9d9;
   color: #000000;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
 }
 
 h1,
 h2 {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: 'Roboto', Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 table {
@@ -24,33 +30,50 @@ table thead tr {
 
 table thead tr.legend,
 table thead tr.legend th {
-  border: 1px solid #ffffff;
+  border: 1px solid #ccc;
   text-align: center;
+  font-size: 1.1em;
 }
 
 table thead tr th.type {
-  background-color: #3498db;
+  background-color: #005690;
   color: #ffffff;
+}
+
+table thead tr th.active {
+  background-color: #005690;
+  border-bottom: 1px solid #005690;
 }
 
 table thead tr th.legacy {
-  background-color: #f8f3ef;
-  color: #000000;
+  background-color: #545454;
+  color: #FFF;
 }
 
 table thead tr th.current {
-  background-color: #62da2a;
-  color: #000000;
+  background-color: #315221;
+  color: #FFF;
 }
 
 table thead tr th.modifier {
-  background-color: #e7ad09;
-  color: #ffffff;
+  background-color: #74411d;
+  color: #FFF;
+}
+
+table th {
+  border: 1px solid #FFF;
+}
+
+#keydown-cb-id, 
+#keypress-cb-id,
+#keyup-cb-id {
+  accent-color: var(--main-color);
 }
 
 table th,
 table td {
   padding: 12px 15px;
+  text-align: center;
 }
 
 table tbody tr {
@@ -58,16 +81,12 @@ table tbody tr {
 }
 
 table tbody tr:nth-of-type(even) {
-  background-color: #f3f3f3;
-}
-
-table tbody tr:last-of-type {
-  border-bottom: 2px solid #3498db;
+  background-color: #efefef;
 }
 
 table tbody tr.active-row {
   font-weight: bold;
-  color: #3498db;
+  color: var(--main-color);
 }
 
 .key {
@@ -76,23 +95,25 @@ table tbody tr.active-row {
 
 .key mark {
   font-size: 60px;
-  background-color: #ec10d1;
+  background-color: var(--main-color);
   color: #ffffff;
   border-radius: 3px;
-  padding: 5px;
+  padding: 5px 25px;
 }
 
 .hint {
   margin-top: 5px;
   margin-left: 5px;
-  color: #767474;
+  font-size: 0.8em;
+  
 }
 
 .results {
   margin: 10px 5px 0px 5px;
-  background-color: #ebebeb;
-  padding: 10px;
-  border-radius: 4px;
+  background-color: #FFF;
+  padding: 30px;
+  margin: 20px 45px;
+  border-radius: 25px;
   overflow: auto;
 }
 
@@ -104,10 +125,11 @@ table tbody tr.active-row {
 
 .filter {
   margin-left: 5px;
+  font-weight: 500;
 }
 
 .v-false {
-  color: #ec8282;
+  color: #c15151;
 }
 
 .v-true {
@@ -139,21 +161,15 @@ table tbody tr.active-row {
 }
 
 dialog::backdrop {
-  background: repeating-linear-gradient(
-    30deg,
-    rgba(24, 194, 236, 0.2),
-    rgba(24, 194, 236, 0.2) 1px,
-    rgba(24, 194, 236, 0.3) 1px,
-    rgba(24, 194, 236, 0.3) 20px
-  );
+  background: rgba(0,0,0,0.7);
   backdrop-filter: blur(1px)
 }
 
 button {
   height: 25px;
-  background-color: #31a1fa;
+  background-color: var(--main-color);
   color: #FFF;
-  border: 1px solid #008eff;
+  border: 0px solid #000;
   border-radius: 4px;
   cursor: pointer;
 }
@@ -161,4 +177,14 @@ button {
 button.close {
   background-color: rgba(255, 30, 0, 0.897);
   border: 1px solid #ff006f;
+}
+
+.banner {
+  background-color: var(--main-color);
+  color: #FFF;
+  padding: 15px 20px;
+}
+
+#app h1, #app h2 {
+  text-align: center;
 }
