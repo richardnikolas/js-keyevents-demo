@@ -115,6 +115,9 @@ table tbody tr.active-row {
   margin: 20px 45px;
   border-radius: 25px;
   overflow: auto;
+  -webkit-box-shadow: 0px 3px 15px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 3px 15px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 3px 15px 0px rgba(0,0,0,0.75);
 }
 
 .note {
@@ -180,7 +183,13 @@ button.close {
 }
 
 .banner {
-  background-color: var(--main-color);
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.4), 
+    rgba(0, 0, 0, 0.7)
+  ), url("./assets/images/keyboard.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   color: #FFF;
   padding: 15px 20px;
 }
